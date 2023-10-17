@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { frFR } from "@clerk/localizations";
 
 import "./index.css";
 
@@ -46,7 +47,7 @@ const clerkPubKey = import.meta.env.VITE_REACT_APP_CLERK_PUBLISHABLE_KEY;
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <ClerkProvider publishableKey={clerkPubKey}>
+    <ClerkProvider publishableKey={clerkPubKey} localization={frFR}>
       <QueryClientProvider client={query}>
         <SignedIn>
           <RouterProvider router={router} />
